@@ -1,0 +1,135 @@
+:root{
+    font-family: sans-serif;
+}
+#webPage-container{
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ 
+ width: 100%;
+ height: 100%;
+
+
+}
+#top-banner{
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+
+}
+# main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.cards{
+    width: 10vw;
+    height: 15vh;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center; 
+    background-color: aqua;
+    border: 2px solid black;
+
+}
+.cards > button {
+    grid-column: 1/3;
+    margin: 7px;
+    align-items: center;
+    justify-content: center;
+    grid-row: 4;
+}
+.leftDiv{
+    grid-column: 1/1;
+    margin-left: 3px;
+    margin-top: 5px;
+   
+}
+.rightDiv{
+    grid-column: 2/2;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+
+   
+}
+
+.ulParent{
+    margin-top: 20px;
+    display: grid;
+    width: 90%;
+    /* height: 55vh; */
+    grid-template-columns: repeat(auto-fit, 30%);
+    grid-template-rows: 30%;
+    grid-auto-rows: 30%;
+    gap: 10px;
+    /* overflow: auto; */
+    margin-left: 10px;
+    justify-content: center
+
+}
+#ulParent > *{
+    width: 100%;
+    height: 15vh;
+    background-color: aqua;
+    
+}
+.modal{
+    position: absolute ;
+    z-index: 1;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    border-radius: 3px; 
+    height: 20%;
+
+}
+.modal> form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+#AddBookForm > button:not(#close-modal){
+    height: 2.5vh;
+    width: 5vw;
+}
+#AddBookForm > #close-modal{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: transparent;
+}
+#new-book-holder{
+    border-bottom: 1.5px solid grey;
+    width: 100vw;
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
+    height: 65px;
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#new-book-holder > button{
+    width: 2in;
+    height: .4in;
+    border-radius: 15px;
+
+}
